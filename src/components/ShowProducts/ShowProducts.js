@@ -40,7 +40,7 @@ const ShowProducts = () => {
 
 
     return (
-        <div className='container mx-auto my-10'>
+        <div className='container mx-auto my-16 md:px-10'>
 
             <form onSubmit={handleSubmit(handleAddProduct)}>
                 <div className='flex justify-center items-center my-5'>
@@ -88,7 +88,7 @@ const ShowProducts = () => {
                     </h1>
                 </div>
             }
-            
+
             <div className='flex justify-center mt-10'>
                 <Link to='/'><button className="btn btn-primary text-center ">Back Home</button></Link>
             </div>

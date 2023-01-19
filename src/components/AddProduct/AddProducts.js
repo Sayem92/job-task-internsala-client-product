@@ -39,7 +39,7 @@ const AddProducts = () => {
 
 
     return (
-        <div className='pr-1 py-10 md:w-96 mx-auto'>
+        <div className='pr-1 py-16 md:w-96 mx-auto'>
         <h2 className="text-3xl font-semibold ml-8 text-center">Add A Product</h2>
         <div className='md:w-96 p-7 shadow-xl mx-2'>
             <form onSubmit={handleSubmit(handleAddProduct)}>
