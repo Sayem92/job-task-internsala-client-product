@@ -20,7 +20,7 @@ const AddProducts = () => {
                     
 
                     // sava information to the database----------
-                    fetch(`http://localhost:5000/addProduct`, {
+                    fetch(`https://server-sayem92.vercel.app/addProduct`, {
                         method: "POST",
                         headers: {
                             'content-type': "application/json"

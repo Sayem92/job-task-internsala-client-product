@@ -17,7 +17,7 @@ const ShowProducts = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch(`http://localhost:5000/product`)
+        fetch(`https://server-sayem92.vercel.app/product`)
             .then(res => res.json())
             .then(data => {
                 if (id) {
