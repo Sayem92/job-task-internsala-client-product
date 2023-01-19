@@ -1,11 +1,11 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AddProducts = () => {
-
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const navigate = useNavigate();
 
     const handleAddProduct = data => {
 
@@ -31,6 +31,7 @@ const AddProducts = () => {
                         .then(result => {
                             console.log(result);
                             toast.success(`${data.productName} info save successful`);
+                            navigate('/showProducts')
                            
                         })
                 
@@ -48,7 +49,7 @@ const AddProducts = () => {
                     </label>
                     <input type="number" {...register('productId', {
                         required: "Please enter product id"
-                    })} className="input input-sm input-bordered  w-full max-w-xs" placeholder="Product name" />
+                    })} className="input input-sm input-bordered  w-full max-w-xs" placeholder="Enter Product id " />
                     {errors.productId && <p className='text-red-600'>{errors.productId.message}</p>}
                 </div>
                 
